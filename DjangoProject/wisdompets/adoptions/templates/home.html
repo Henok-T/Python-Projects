@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<ul class="list">
+    {% for pet in pets %}
+    <li class="list-item">
+        <div class="list-content">
+
+                {% if pet.image %}
+                    <img src="{{ pet.image.url }}" alt="petImage" width="120" height="120">
+                {% else %}
+                    <img src="{% static 'images/defaultPetPic.png' %}" alt="Default-pet-Image" width="120" height="120">
+                {% endif %}
+                    <div class="petname">
+                        <a href="{% url 'pet_detail' pet.id %}">
+                            <h3>{{pet.name|capfirst}}</h3>
+                        </a>
+                        <p>Species: {{ pet.species }}</p>
+                        {% if pet.breed %}
+                            <p>Bread: {{pet.breed }}</p>
+                        {% endif %}
+                        <p class="hidden"><strong>More Info about {{pet.name}}</strong>: {{pet.description }}</p>
+                    </div>
+
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+{%  endblock %}
