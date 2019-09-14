@@ -145,7 +145,9 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
 	padding-bottom: 15px;
 	font-weight: normal;
+
 }
+
 h1 { font-size: 30px; }
 h2 { font-size: 28px; }
 h3 { font-size: 26px; }
@@ -1144,6 +1146,7 @@ img#wpstats {
 	height: 2px;
 	margin: 20px auto;
 	width: 100px;
+
 }
 .portfolio-main-description {
 	text-align: center;
@@ -2161,7 +2164,7 @@ iframe#wp-custom-header-video {
   color: #FFD700;
 }
 
-/*
-====> ====> My added code hkt
---------------------------------------------------------------*/
+
+
+/*my addes */
 

@@ -20,12 +20,14 @@
                         {% if pet.breed %}
                             <p>Bread: {{pet.breed }}</p>
                         {% endif %}
-                        <p class="hidden"><strong>More Info about {{pet.name}}</strong>: {{pet.description }}</p>
+                        <p class="moreInfo"> <!--class="hidden"--> <strong>More Info</strong>: {{pet.description }}</p>
                     </div>
 
         </div>
+
     </li>
     {% endfor %}
+
 </ul>
 
 {%  endblock %}

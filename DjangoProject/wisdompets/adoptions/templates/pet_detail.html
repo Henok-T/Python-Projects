@@ -6,7 +6,7 @@
 <div>
 
     <img src="{{ pet.image.url }}" alt="petImage" width="120" height="120">
-    <h3>{{pet.name|capfirst}}</h3>
+    <h3 id="PetName">{{pet.name|capfirst}}</h3>
     <p>Species: {{pet.species}}</p>
     {% if pet.breed %}
         <p>Bread: {{pet.breed }}</p>
@@ -27,14 +27,6 @@
     {% endif%}
     <p>Submitted by: {{ pet.submitter }}</p>
     <p>Submitted on: {{ pet.submission_date|date:"M. d, Y" }}</p>
-    <p><strong>More Info about {{pet.name}}</strong>: {{ pet.description}}</p>
-    {% if pet.image %}
-        <img src="{{ pet.image.url }}" alt="petImage" width="120" height="120">
-    {% else %}
-        <img src="{% static 'images/defaultPetPic.png' %}" alt="Default-pet-Image" width="120" height="120">
-    {% endif %}
-
-
-
+    <p><strong>More-Info</strong>: {{ pet.description}}</p>
 </div>
 {% endblock %}

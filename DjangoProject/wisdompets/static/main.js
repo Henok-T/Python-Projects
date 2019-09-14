@@ -28,3 +28,11 @@ function petSectionEndHover() {
         petSections[i].addEventListener('mouseout', petSectionEndHover);
     }
 }());
+
+
+
+  $(document).ready(function() {
+    $("#ShowMoreOrLess").click(function() {
+      $(".hiddenContetn").toggle();
+    });
+  });
